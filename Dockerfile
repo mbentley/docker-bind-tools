@@ -1,8 +1,7 @@
-FROM debian:sid
+FROM alpine:latest
+MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
-RUN apt-get update &&\
-  apt-get install -y dnsutils &&\
-  rm -rf /var/lib/apt/lists/*
+RUN apk --no-cache add bind-tools
 
 ENTRYPOINT ["/usr/bin/dig"]
 CMD ["-h"]

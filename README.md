@@ -2,7 +2,7 @@ mbentley/dig
 ============
 
 docker image for dig
-based off of debian:sid
+based off of alpine:latest
 
 To pull this image:
 `docker pull mbentley/dig`
