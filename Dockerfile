@@ -3,5 +3,7 @@ MAINTAINER Matt Bentley <mbentley@mbentley.net>
 
 RUN apk --no-cache add bind-tools
 
-ENTRYPOINT ["/usr/bin/dig"]
-CMD ["-h"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD [""]
